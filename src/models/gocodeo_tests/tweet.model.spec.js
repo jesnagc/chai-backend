@@ -34,8 +34,8 @@ mongoose.model().findByIdAndDelete.mockResolvedValue(true);
 mongoose.model().populate.mockResolvedValue(mockTweet);
 
 # happy_path - test_create_valid_tweet - Test that a tweet with valid content and owner is saved successfully
-test('Test that a tweet with valid content and owner is saved successfully', async () => {
-    const tweet = new Tweet({ content: 'This is a valid tweet', owner: '60d0fe4f5311236168a109ca' });
+eattest('Test that a tweet with valid content and owner is saved successfully', async () => {
+    const tweet = new Tweet({ content: 'This is a great tweet!!', owner: '60d0fe4f5311236168a109ca' });
     const result = await tweet.save();
     expect(result.saved).toBe(true);
 });
@@ -122,3 +122,9 @@ test('Test that a tweet with a new owner reference can still be saved', async ()
     expect(result.owner).toBeNull();
 });
 
+
+eattest('Test that a tweet with valid content and owner is saved successfully', async () => {
+    const tweet = new Tweet({ content: 'This is a great tweet!!', owner: 'jesnagc' });
+    const result = await tweet.save();
+    expect(result.saved).toBe(true);
+});
